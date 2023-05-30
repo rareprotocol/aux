@@ -1,0 +1,242 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenCreator",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "tokenCreator(uint256)": "40c1a064"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenCreator\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/registry/interfaces/ITokenCreator.sol\":\"ITokenCreator\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":royalty-guard/=lib/royalty-guard/src/royalty-guard/\",\":solmate/=lib/royalty-guard/lib/solmate/src/\"]},\"sources\":{\"src/registry/interfaces/ITokenCreator.sol\":{\"keccak256\":\"0x99d42fe287a110f4a5c8e4eb5442807c7dfafa417dfc3c1e4f6f4dfea1eb363e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e71b67554f5ffd43a13f5c5463bd74caafb4f793eb0c36804239450b4ea7092a\",\"dweb:/ipfs/Qme1GpEVuKcBe9whHcA3e1SNYAnQbFvt8ast1SmjGE8J1f\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "tokenCreator",
+          "outputs": [
+            {
+              "internalType": "address payable",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":royalty-guard/=lib/royalty-guard/src/royalty-guard/",
+        ":solmate/=lib/royalty-guard/lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/registry/interfaces/ITokenCreator.sol": "ITokenCreator"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/registry/interfaces/ITokenCreator.sol": {
+        "keccak256": "0x99d42fe287a110f4a5c8e4eb5442807c7dfafa417dfc3c1e4f6f4dfea1eb363e",
+        "urls": [
+          "bzz-raw://e71b67554f5ffd43a13f5c5463bd74caafb4f793eb0c36804239450b4ea7092a",
+          "dweb:/ipfs/Qme1GpEVuKcBe9whHcA3e1SNYAnQbFvt8ast1SmjGE8J1f"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/registry/interfaces/ITokenCreator.sol",
+    "id": 38389,
+    "exportedSymbols": {
+      "ITokenCreator": [
+        38388
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:214:69",
+    "nodes": [
+      {
+        "id": 38380,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:69",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 38388,
+        "nodeType": "ContractDefinition",
+        "src": "57:188:69",
+        "nodes": [
+          {
+            "id": 38387,
+            "nodeType": "FunctionDefinition",
+            "src": "149:94:69",
+            "nodes": [],
+            "functionSelector": "40c1a064",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenCreator",
+            "nameLocation": "158:12:69",
+            "parameters": {
+              "id": 38383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38382,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "188:8:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38387,
+                  "src": "180:16:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38381,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "180:7:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "170:32:69"
+            },
+            "returnParameters": {
+              "id": 38386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38387,
+                  "src": "226:15:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 38384,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:15:69",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "225:17:69"
+            },
+            "scope": 38388,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ITokenCreator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38388
+        ],
+        "name": "ITokenCreator",
+        "nameLocation": "67:13:69",
+        "scope": 38389,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 69
+}

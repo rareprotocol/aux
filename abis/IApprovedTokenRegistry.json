@@ -1,0 +1,551 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "name": "addApprovedToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedToken",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "name": "removeApprovedToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_allTokensApproved",
+          "type": "bool"
+        }
+      ],
+      "name": "setAllTokensApproved",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addApprovedToken(address)": "cd10534b",
+    "isApprovedToken(address)": "2d5ad3d5",
+    "removeApprovedToken(address)": "5705987a",
+    "setAllTokensApproved(bool)": "32a801a2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenContract\",\"type\":\"address\"}],\"name\":\"addApprovedToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenContract\",\"type\":\"address\"}],\"name\":\"isApprovedToken\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenContract\",\"type\":\"address\"}],\"name\":\"removeApprovedToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_allTokensApproved\",\"type\":\"bool\"}],\"name\":\"setAllTokensApproved\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addApprovedToken(address)\":{\"params\":{\"_tokenContract\":\"Contract of token being approved.\"}},\"isApprovedToken(address)\":{\"params\":{\"_tokenContract\":\"Contract of token being checked.\"},\"returns\":{\"_0\":\"True if the token is allowed, false otherwise.\"}},\"removeApprovedToken(address)\":{\"params\":{\"_tokenContract\":\"Contract of token being approved.\"}},\"setAllTokensApproved(bool)\":{\"params\":{\"_allTokensApproved\":\"Bool denoting if all tokens should be approved.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addApprovedToken(address)\":{\"notice\":\"Adds a token to the list of approved tokens.\"},\"isApprovedToken(address)\":{\"notice\":\"Returns if a token has been approved or not.\"},\"removeApprovedToken(address)\":{\"notice\":\"Removes a token from the approved tokens list.\"},\"setAllTokensApproved(bool)\":{\"notice\":\"Sets whether all token contracts should be approved.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/registry/interfaces/IApprovedTokenRegistry.sol\":\"IApprovedTokenRegistry\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":royalty-guard/=lib/royalty-guard/src/royalty-guard/\",\":solmate/=lib/royalty-guard/lib/solmate/src/\"]},\"sources\":{\"src/registry/interfaces/IApprovedTokenRegistry.sol\":{\"keccak256\":\"0xdb86d418bedb954ea79129631d734b42749d4a0ca00635ecdf3dfeb8e81fb60a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad677939c49f8a55f7a1c1e78b0abbe722744abc5c26b81eef5a20a578d415d2\",\"dweb:/ipfs/QmZL6aHq79B8TFPrc5Zrt7iLxuqkoJikhEJtq8hgk1aKMC\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenContract",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addApprovedToken"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenContract",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isApprovedToken",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenContract",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeApprovedToken"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bool",
+              "name": "_allTokensApproved",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setAllTokensApproved"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addApprovedToken(address)": {
+            "params": {
+              "_tokenContract": "Contract of token being approved."
+            }
+          },
+          "isApprovedToken(address)": {
+            "params": {
+              "_tokenContract": "Contract of token being checked."
+            },
+            "returns": {
+              "_0": "True if the token is allowed, false otherwise."
+            }
+          },
+          "removeApprovedToken(address)": {
+            "params": {
+              "_tokenContract": "Contract of token being approved."
+            }
+          },
+          "setAllTokensApproved(bool)": {
+            "params": {
+              "_allTokensApproved": "Bool denoting if all tokens should be approved."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addApprovedToken(address)": {
+            "notice": "Adds a token to the list of approved tokens."
+          },
+          "isApprovedToken(address)": {
+            "notice": "Returns if a token has been approved or not."
+          },
+          "removeApprovedToken(address)": {
+            "notice": "Removes a token from the approved tokens list."
+          },
+          "setAllTokensApproved(bool)": {
+            "notice": "Sets whether all token contracts should be approved."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":royalty-guard/=lib/royalty-guard/src/royalty-guard/",
+        ":solmate/=lib/royalty-guard/lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/registry/interfaces/IApprovedTokenRegistry.sol": "IApprovedTokenRegistry"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/registry/interfaces/IApprovedTokenRegistry.sol": {
+        "keccak256": "0xdb86d418bedb954ea79129631d734b42749d4a0ca00635ecdf3dfeb8e81fb60a",
+        "urls": [
+          "bzz-raw://ad677939c49f8a55f7a1c1e78b0abbe722744abc5c26b81eef5a20a578d415d2",
+          "dweb:/ipfs/QmZL6aHq79B8TFPrc5Zrt7iLxuqkoJikhEJtq8hgk1aKMC"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/registry/interfaces/IApprovedTokenRegistry.sol",
+    "id": 38297,
+    "exportedSymbols": {
+      "IApprovedTokenRegistry": [
+        38296
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:962:65",
+    "nodes": [
+      {
+        "id": 38269,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 38296,
+        "nodeType": "ContractDefinition",
+        "src": "57:936:65",
+        "nodes": [
+          {
+            "id": 38277,
+            "nodeType": "FunctionDefinition",
+            "src": "283:102:65",
+            "nodes": [],
+            "documentation": {
+              "id": 38270,
+              "nodeType": "StructuredDocumentation",
+              "src": "96:182:65",
+              "text": "@notice Returns if a token has been approved or not.\n @param _tokenContract Contract of token being checked.\n @return True if the token is allowed, false otherwise."
+            },
+            "functionSelector": "2d5ad3d5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isApprovedToken",
+            "nameLocation": "292:15:65",
+            "parameters": {
+              "id": 38273,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38272,
+                  "mutability": "mutable",
+                  "name": "_tokenContract",
+                  "nameLocation": "316:14:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38277,
+                  "src": "308:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38271,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:24:65"
+            },
+            "returnParameters": {
+              "id": 38276,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38275,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38277,
+                  "src": "379:4:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 38274,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "379:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "378:6:65"
+            },
+            "scope": 38296,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38283,
+            "nodeType": "FunctionDefinition",
+            "src": "516:59:65",
+            "nodes": [],
+            "documentation": {
+              "id": 38278,
+              "nodeType": "StructuredDocumentation",
+              "src": "391:120:65",
+              "text": "@notice Adds a token to the list of approved tokens.\n @param _tokenContract Contract of token being approved."
+            },
+            "functionSelector": "cd10534b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addApprovedToken",
+            "nameLocation": "525:16:65",
+            "parameters": {
+              "id": 38281,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38280,
+                  "mutability": "mutable",
+                  "name": "_tokenContract",
+                  "nameLocation": "550:14:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38283,
+                  "src": "542:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38279,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "541:24:65"
+            },
+            "returnParameters": {
+              "id": 38282,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "574:0:65"
+            },
+            "scope": 38296,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38289,
+            "nodeType": "FunctionDefinition",
+            "src": "708:62:65",
+            "nodes": [],
+            "documentation": {
+              "id": 38284,
+              "nodeType": "StructuredDocumentation",
+              "src": "581:122:65",
+              "text": "@notice Removes a token from the approved tokens list.\n @param _tokenContract Contract of token being approved."
+            },
+            "functionSelector": "5705987a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeApprovedToken",
+            "nameLocation": "717:19:65",
+            "parameters": {
+              "id": 38287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38286,
+                  "mutability": "mutable",
+                  "name": "_tokenContract",
+                  "nameLocation": "745:14:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38289,
+                  "src": "737:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38285,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "736:24:65"
+            },
+            "returnParameters": {
+              "id": 38288,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "769:0:65"
+            },
+            "scope": 38296,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38295,
+            "nodeType": "FunctionDefinition",
+            "src": "927:64:65",
+            "nodes": [],
+            "documentation": {
+              "id": 38290,
+              "nodeType": "StructuredDocumentation",
+              "src": "776:146:65",
+              "text": "@notice Sets whether all token contracts should be approved.\n @param _allTokensApproved Bool denoting if all tokens should be approved."
+            },
+            "functionSelector": "32a801a2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAllTokensApproved",
+            "nameLocation": "936:20:65",
+            "parameters": {
+              "id": 38293,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38292,
+                  "mutability": "mutable",
+                  "name": "_allTokensApproved",
+                  "nameLocation": "962:18:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38295,
+                  "src": "957:23:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 38291,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "956:25:65"
+            },
+            "returnParameters": {
+              "id": 38294,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "990:0:65"
+            },
+            "scope": 38296,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IApprovedTokenRegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38296
+        ],
+        "name": "IApprovedTokenRegistry",
+        "nameLocation": "67:22:65",
+        "scope": 38297,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 65
+}
