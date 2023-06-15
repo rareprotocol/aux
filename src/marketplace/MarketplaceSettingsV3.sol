@@ -2,6 +2,7 @@
 pragma solidity 0.8.15;
 
 import {IMarketplaceSettings} from "./IMarketplaceSettings.sol";
+import {MarketplaceSettingsV2} from "./MarketplaceSettingsV2.sol";
 import {IStakingSettings} from "./IStakingSettings.sol";
 import {AccessControl} from "openzeppelin-contracts/access/AccessControl.sol";
 import {IERC721} from "openzeppelin-contracts/token/ERC721/IERC721.sol";
@@ -18,7 +19,7 @@ contract MarketplaceSettingsV3 is
     bytes32 public constant TOKEN_MARK_ROLE = keccak256("TOKEN_MARK_ROLE");
 
     // This is meant to be the MarketplaceSettings contract located in the V1 folder
-    IMarketplaceSettings private oldMarketplaceSettings;
+    MarketplaceSettingsV2 private oldMarketplaceSettings;
 
     // EnumerableSet library method
     using EnumerableSet for EnumerableSet.AddressSet;
@@ -33,7 +34,7 @@ contract MarketplaceSettingsV3 is
     uint8 private primarySaleFeePercentage;
 
     constructor(address newOwner, address oldSettings) {
-        maxValue = 2 ** 254;
+        maxValue = 2**254;
         minValue = 1000;
         marketplaceFeePercentage = 3;
         primarySaleFeePercentage = 15;
@@ -53,7 +54,7 @@ contract MarketplaceSettingsV3 is
         _setupRole(TOKEN_MARK_ROLE, newOwner);
         transferOwnership(newOwner);
 
-        oldMarketplaceSettings = IMarketplaceSettings(oldSettings);
+        oldMarketplaceSettings = MarketplaceSettingsV2(oldSettings);
     }
 
     function grantMarketplaceAccess(address _account) external {
@@ -68,9 +69,10 @@ contract MarketplaceSettingsV3 is
         return maxValue;
     }
 
-    function setPrimarySaleFeePercentage(
-        uint8 _primarySaleFeePercentage
-    ) external onlyOwner {
+    function setPrimarySaleFeePercentage(uint8 _primarySaleFeePercentage)
+        external
+        onlyOwner
+    {
         primarySaleFeePercentage = _primarySaleFeePercentage;
     }
 
@@ -103,15 +105,21 @@ contract MarketplaceSettingsV3 is
         marketplaceFeePercentage = _percentage;
     }
 
-    function calculateMarketplaceFee(
-        uint256 _amount
-    ) external view override returns (uint256) {
+    function calculateMarketplaceFee(uint256 _amount)
+        external
+        view
+        override
+        returns (uint256)
+    {
         return (_amount * marketplaceFeePercentage) / 100;
     }
 
-    function getERC721ContractPrimarySaleFeePercentage(
-        address
-    ) external view override returns (uint8) {
+    function getERC721ContractPrimarySaleFeePercentage(address)
+        external
+        view
+        override
+        returns (uint8)
+    {
         return primarySaleFeePercentage;
     }
 
@@ -120,17 +128,21 @@ contract MarketplaceSettingsV3 is
         uint8 _percentage
     ) external override {}
 
-    function calculatePrimarySaleFee(
-        address,
-        uint256 _amount
-    ) external view override returns (uint256) {
+    function calculatePrimarySaleFee(address, uint256 _amount)
+        external
+        view
+        override
+        returns (uint256)
+    {
         return (_amount * primarySaleFeePercentage) / 100;
     }
 
-    function hasERC721TokenSold(
-        address _contractAddress,
-        uint256 _tokenId
-    ) external view override returns (bool) {
+    function hasERC721TokenSold(address _contractAddress, uint256 _tokenId)
+        external
+        view
+        override
+        returns (bool)
+    {
         bool contractHasSold = contractSold.contains(_contractAddress);
 
         if (contractHasSold) return true;
@@ -178,20 +190,15 @@ contract MarketplaceSettingsV3 is
         }
     }
 
-    function markContractAsSold(
-        address _contractAddress
-    ) external returns (bool) {
+    function markContractAsSold(address _contractAddress)
+        external
+        returns (bool)
+    {
         require(
             hasRole(TOKEN_MARK_ROLE, msg.sender),
             "markContract::Must have TOKEN_MARK_ROLE role to call method"
         );
-        // Prevents contract address from being marked multiple times
-        require(
-            !contractSold.contains(_contractAddress),
-            "markContract::Contract already marked as sold"
-        );
-        // Adds contract address to set
-        return contractSold.add(_contractAddress);
+        return oldMarketplaceSettings.markContractAsSold(_contractAddress);
     }
 
     function getStakingFeePercentage() external view override returns (uint8) {
@@ -206,15 +213,21 @@ contract MarketplaceSettingsV3 is
         stakingFeePercentage = _percentage;
     }
 
-    function calculateStakingFee(
-        uint256 _amount
-    ) external view override returns (uint256) {
+    function calculateStakingFee(uint256 _amount)
+        external
+        view
+        override
+        returns (uint256)
+    {
         return (_amount * stakingFeePercentage) / 100;
     }
 
-    function calculateMarketplacePayoutFee(
-        uint256 _amount
-    ) external view override returns (uint256) {
+    function calculateMarketplacePayoutFee(uint256 _amount)
+        external
+        view
+        override
+        returns (uint256)
+    {
         return
             (_amount * (marketplaceFeePercentage - stakingFeePercentage)) / 100;
     }

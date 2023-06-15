@@ -1,8 +1,8 @@
 {
-  "name": "superrare-aux",
+  "name": "aux",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "git@github.com:superrare/superrare-aux",
+  "repository": "git@github.com:rareprotocol/aux",
   "main": "index.js",
   "engines": {
     "node": ">=16"
