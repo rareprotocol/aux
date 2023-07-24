@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity 0.8.18;
 
 import {PullPayment} from "openzeppelin-contracts/security/PullPayment.sol";
 import {IPayments} from "./IPayments.sol";

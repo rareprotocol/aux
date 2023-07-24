@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity 0.8.18;
 
 import {Ownable} from "openzeppelin-contracts/access/Ownable.sol";
 import {ERC165Checker} from "openzeppelin-contracts/utils/introspection/ERC165Checker.sol";
@@ -30,10 +30,12 @@ contract CreatorRegistry is Ownable, ICreatorRegistry {
         }
     }
 
-    function tokenCreator(
-        address _contractAddress,
-        uint256 _tokenId
-    ) external view override returns (address payable) {
+    function tokenCreator(address _contractAddress, uint256 _tokenId)
+        external
+        view
+        override
+        returns (address payable)
+    {
         address payable creator = payable(address(0));
 
         if (
