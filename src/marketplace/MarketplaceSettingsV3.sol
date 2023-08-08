@@ -21,12 +21,6 @@ contract MarketplaceSettingsV3 is
     // This is meant to be the MarketplaceSettings contract located in the V1 folder
     MarketplaceSettingsV2 private oldMarketplaceSettings;
 
-    // EnumerableSet library method
-    using EnumerableSet for EnumerableSet.AddressSet;
-
-    // EnumerableSet of contracts marked sold
-    EnumerableSet.AddressSet private contractSold;
-
     uint256 private maxValue;
     uint256 private minValue;
 
@@ -143,10 +137,6 @@ contract MarketplaceSettingsV3 is
         override
         returns (bool)
     {
-        bool contractHasSold = contractSold.contains(_contractAddress);
-
-        if (contractHasSold) return true;
-
         return
             oldMarketplaceSettings.hasERC721TokenSold(
                 _contractAddress,
